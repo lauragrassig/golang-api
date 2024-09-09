@@ -8,7 +8,7 @@ import (
 
 func initRoutes(h *handler.Handler, mux *http.ServeMux) {
 	mux.HandleFunc("GET /", h.Home)
-	mux.HandleFunc("GET /user", h.Home)
-	mux.HandleFunc("GET /users", h.Home)
-	mux.HandleFunc("POST /user", h.Home)
+	mux.HandleFunc("GET /user", h.GetUser)
+	mux.HandleFunc("GET /users", h.GetUsers)
+	mux.HandleFunc("POST /user", h.CreateUser)
 }
